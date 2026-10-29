@@ -1,0 +1,37 @@
+/* laglab.app: Farben wie die App im Modus Blau, im hellen Systemmodus wie Hell */
+:root {
+  --bg: #384c60; --band: #2c3a47; --fg: #e8edf2; --mut: #93a5b6; --acc: #85b7eb; --lab: #f5a623; --line: rgba(255, 255, 255, 0.12);
+  --lg-disk: #f9f6ee; --lg-blade: #ef8a4c;
+}
+@media (prefers-color-scheme: light) {
+  :root { --bg: #f2f4f6; --band: #e3e7eb; --fg: #1c2228; --mut: #5c6b7a; --acc: #185fa5; --lab: #c27c0e; --line: rgba(0, 0, 0, 0.1); --lg-disk: #2c3a47; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 system-ui, Roboto, "Segoe UI", sans-serif; }
+a { color: var(--acc); }
+header { background: var(--band); }
+.bar { max-width: 760px; margin: 0 auto; padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.bar a.home { display: flex; align-items: center; gap: 12px; color: var(--fg); text-decoration: none; }
+.logo { width: 40px; height: 40px; flex: none; }
+.name { font-size: 20px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 300; }
+.name b { color: var(--lab); font-weight: 600; margin-left: 0.25em; }
+.bar .lang { margin-left: auto; font-size: 14px; }
+main { max-width: 760px; margin: 0 auto; padding: 8px 16px 40px; }
+h1 { font-size: 26px; font-weight: 650; margin: 24px 0 8px; }
+h2 { font-size: 18px; font-weight: 650; margin: 28px 0 6px; color: var(--acc); }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 4px; }
+.sub { color: var(--mut); margin-top: -4px; }
+.hero { text-align: center; padding: 40px 0 16px; }
+.hero .logo { width: 96px; height: 96px; }
+.hero .name { display: block; font-size: 30px; margin-top: 14px; }
+.hero .tag { color: var(--mut); letter-spacing: 0.2em; text-transform: uppercase; font-size: 13px; margin-top: 4px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: 24px; }
+.stand { color: var(--mut); font-size: 14px; margin-top: 32px; }
+footer { border-top: 1px solid var(--line); }
+footer .bar { font-size: 14px; color: var(--mut); flex-wrap: wrap; gap: 6px 16px; }
+footer a { color: var(--mut); }
+/* Platzhalter, die vor dem Veröffentlichen ersetzt werden müssen */
+.todo { background: #ffd21f; color: #1c2228; padding: 0 4px; border-radius: 3px; font-weight: 600; }
